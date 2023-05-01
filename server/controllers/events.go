@@ -2,14 +2,15 @@ package controllers
 
 import (
 	"net/http"
+	"time"
 	"web-service/models"
 
 	"github.com/gin-gonic/gin"
 )
 
 var events = []models.Event{
-	{ID: "1", Title: "Stand up", From: "22-03-2022 11:15AM", To: "22-03-2022 11:15AM"},
-	{ID: "2", Title: "Gym", From: "22-03-2022 11:15AM", To: "22-03-2022 11:15AM"},
+	{ID: "1", Title: "Stand up", From: time.Now(), To: time.Now()},
+	{ID: "2", Title: "Gym", From: time.Now(), To: time.Now()},
 }
 
 func GetEvents(c *gin.Context) {
