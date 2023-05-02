@@ -12,5 +12,5 @@ func main() {
 	router.POST("/event", controllers.CreateEvent)
 	router.GET("/event/:id", controllers.GetEventByID)
 
-	router.Run("localhost:8080")
+	router.Run("0.0.0.0:8080")
 }
