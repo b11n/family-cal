@@ -24,6 +24,8 @@ func ConnectDatabase() {
 	}
 
 	err = database.AutoMigrate(&Event{})
+	err = database.AutoMigrate(&User{})
+	err = database.AutoMigrate(&Calendar{})
 	if err != nil {
 		return
 	}
