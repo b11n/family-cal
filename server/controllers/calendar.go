@@ -29,7 +29,7 @@ func GetCalendar(c *gin.Context) {
 	err := db.DB.Where("id = ?", id).First(&calendar).Error
 
 	if err != nil {
-		c.IndentedJSON(http.StatusNotFound, gin.H{"message": "calendar not found"})
+		c.IndentedJSON(http.StatusNotFound, gin.H{"message": "calendar not found "})
 		return
 	}
 
